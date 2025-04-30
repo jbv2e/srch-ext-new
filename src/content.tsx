@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App' // App 컴포넌트는 다음 단계에서 작성
+// import App from './App' // App 컴포넌트는 다음 단계에서 작성
+import ContextApp from './contextApp' // ContextApp 컴포넌트는 다음 단계에서 작성
 
 // 확장 프로그램 UI를 삽입할 컨테이너 요소 생성\
 const container = document.createElement('div')
@@ -11,6 +12,6 @@ document.body.appendChild(container)
 const root = ReactDOM.createRoot(container)
 root.render(
   <React.StrictMode>
-    <App />
+    <ContextApp />
   </React.StrictMode>
 )

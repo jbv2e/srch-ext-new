@@ -2,7 +2,7 @@
 
 function popupContent() {
   return (
-    <div>
+    <div text-3xl>
       <h1>Popup Content</h1>
       <p>This is the content of the popup.</p>
     </div>

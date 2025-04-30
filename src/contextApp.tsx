@@ -1,4 +1,3 @@
-/*
 import { useState, useEffect, useCallback } from 'react' // useCallback 추가
 
 // 조회 결과 데이터 타입을 정의
@@ -11,7 +10,7 @@ interface SearchResult {
   상태: string
 }
 
-function App() {
+function ContextApp() {
   const [commandNumber, setCommandNumber] = useState('')
   const [region, setRegion] = useState('관악')
   const [todayOnly, setTodayOnly] = useState(false)
@@ -56,7 +55,6 @@ function App() {
   }, [fetchData, refreshInterval]) // 의존성 배열에 fetchData와 refreshInterval 포함
 
   return (
-    // <></>
     <div
       style={{
         padding: '10px',
@@ -72,6 +70,7 @@ function App() {
     >
       <h3>데이터 조회</h3>
 
+      {/* 입력 조건 */}
       <div style={{ marginBottom: '10px' }}>
         <label>명령번호:</label>
         <input
@@ -113,12 +112,14 @@ function App() {
         </label>
       </div>
 
+      {/* 조회 버튼 */}
       <div style={{ textAlign: 'right', marginBottom: '10px' }}>
         <button onClick={fetchData} disabled={loading}>
           {loading ? '조회 중...' : '조회'}
         </button>
       </div>
 
+      {/* 자동 갱신 주기 입력 */}
       <div style={{ marginBottom: '10px' }}>
         <label>자동 갱신 주기 (초):</label>
         <input
@@ -130,6 +131,7 @@ function App() {
         />
       </div>
 
+      {/* 조회 결과 테이블 */}
       <div>
         <h4>조회 결과</h4>
         <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -193,10 +195,5 @@ function App() {
     </div>
   )
 }
-*/
 
-function App() {
-  return <></>
-}
-
-export default App
+export default ContextApp

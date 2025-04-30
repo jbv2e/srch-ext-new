@@ -7,13 +7,17 @@
     "dev": "vite",
     "build:content": "cross-env BUILD_TARGET=content vite build",
     "build:ui": "cross-env BUILD_TARGET=ui vite build",
-    "build": "npm run build:content && npm run build:ui && copy manifest.json dist",
+    "build:popup": "cross-env BUILD_TARGET=popup vite build",
+    "build": "npm run build:content && npm run build:ui && npm run build:popup && copy manifest.json dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
